@@ -1,0 +1,213 @@
+.how-it-works-section {
+    width: 100%;
+    background: var(--background-color);
+    padding: 4rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.how-it-works-section h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.how-it-works-section>.container>p {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    opacity: 0.85;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.2rem;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flip-card {
+    background: transparent;
+    width: 210px;
+    height: 290px;
+    perspective: 1200px;
+    border-radius: 1.2rem;
+    flex: 1 1 210px;
+    min-width: 180px;
+    max-width: 240px;
+    transition: box-shadow 0.2s;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(.4, 2, .6, 1);
+    transform-style: preserve-3d;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 16px rgba(2, 39, 58, 0.10);
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+    box-shadow: 0 4px 32px rgba(52, 161, 222, 0.13);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: stretch;
+    box-shadow: 0 2px 16px rgba(2, 39, 58, 0.10);
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flip-card-front {
+    background: var(--white-color);
+}
+
+.card-image {
+    flex: 1 1 auto;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 0;
+    transition: transform 0.3s;
+}
+
+.card-title {
+    background: rgba(2, 39, 58, 0.92);
+    /* var(--primary-color) con opacidad */
+    padding: 1rem 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.card-title h3 {
+    color: var(--white-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.flip-card-back {
+    background: var(--secondary-color);
+    color: var(--white-color);
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.2rem;
+}
+
+.flip-card-back p {
+    font-size: 1.05rem;
+    color: var(--white-color);
+    margin: 0;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .cards-container {
+        gap: 1.2rem;
+        max-width: 1000px;
+    }
+
+    .flip-card {
+        width: 180px;
+        height: 250px;
+        min-width: 140px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .how-it-works-section {
+        padding: 2.2rem 0 1.5rem 0;
+    }
+
+    .cards-container {
+        gap: 1rem;
+        max-width: 700px;
+    }
+
+    .flip-card {
+        width: 140px;
+        height: 200px;
+        min-width: 110px;
+        max-width: 160px;
+    }
+
+    .card-title {
+        padding: 0.7rem 0.3rem;
+    }
+
+    .card-title h3 {
+        font-size: 0.98rem;
+    }
+
+    .flip-card-back {
+        padding: 1.2rem 0.5rem;
+        font-size: 0.98rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .how-it-works-section h2 {
+        font-size: 1.1rem;
+    }
+
+    .how-it-works-section>.container>p {
+        font-size: 0.98rem;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+    }
+
+    .flip-card {
+        width: 90vw;
+        max-width: 320px;
+        min-width: 180px;
+        height: 160px;
+    }
+
+    .card-title {
+        padding: 0.5rem 0.2rem;
+    }
+
+    .card-title h3 {
+        font-size: 0.95rem;
+    }
+
+    .flip-card-back {
+        padding: 0.8rem 0.3rem;
+        font-size: 0.95rem;
+    }
+}
