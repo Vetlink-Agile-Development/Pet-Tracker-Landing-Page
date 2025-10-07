@@ -1,0 +1,128 @@
+.team-section {
+    width: 100%;
+    background: #e6f6ff;
+    padding: 4rem 0 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--primary-color, #0a2a3a);
+    margin-bottom: 1rem;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.team-subtitle {
+    font-size: 1.25rem;
+    color: var(--primary-color, #0a2a3a);
+    opacity: 0.95;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-card {
+    background: #fff;
+    border-radius: 1rem;
+    box-shadow: 0 2px 16px rgba(2, 39, 58, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    min-width: 0;
+}
+
+.team-card-wide {
+    grid-column: 1 / span 2;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.team-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e0e0e0;
+    flex-shrink: 0;
+    box-shadow: 0 1px 6px rgba(2, 39, 58, 0.10);
+}
+
+.team-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color, #0a2a3a);
+    margin-bottom: 0.1rem;
+}
+
+.team-role {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 0.2rem;
+}
+
+.team-desc {
+    font-size: 1rem;
+    color: var(--primary-color, #0a2a3a);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .team-card-wide {
+        grid-column: auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .team-section {
+        padding: 2rem 0 1.5rem 0;
+    }
+
+    .team-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .team-subtitle {
+        font-size: 1rem;
+    }
+
+    .team-card {
+        padding: 1rem 0.7rem;
+    }
+
+    .team-avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .team-name {
+        font-size: 1.05rem;
+    }
+
+    .team-desc {
+        font-size: 0.95rem;
+    }
+}
