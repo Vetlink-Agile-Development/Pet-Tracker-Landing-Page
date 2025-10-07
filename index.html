@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PetTracker</title>
+	<!-- estilos -->
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+	<header>
+		<nav>
+			<a href="#home" class="logo">
+				<img src="assets/logo.svg" alt="Logo de PetTracker">
+			</a>
+			<div class="nav-menu">
+				<ul class="nav-links">
+					<li><a href="#home">Inicio</a></li>
+					<li><a href="#about">¿Por qué PetTracker?</a></li>
+					<li><a href="#about-intro">Acerca de</a></li>
+					<li><a href="#how-it-works">Cómo funciona</a></li>
+					<li><a href="#plans">Planes</a></li>
+					<li><a href="#team">Equipo</a></li>
+				</ul>
+				<hr class="nav-separator" />
+				<ul class="nav-actions">
+					<li><a href="#login">Iniciar sesión</a></li>
+					<li><a href="#register" class="btn">Registrarse</a></li>
+				</ul>
+			</div>
+			<button class="nav-toggle" aria-label="Abrir menú">
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</nav>
+	</header>
+
+	<script>
+		document.getElementById('year').textContent = new Date().getFullYear();
+	</script>
+	<script src="assets/scripts/navbar.js"></script>
+</body>
+
+</html>
