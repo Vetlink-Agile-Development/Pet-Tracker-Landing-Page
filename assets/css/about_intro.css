@@ -1,0 +1,111 @@
+.about-intro-section {
+    width: 100%;
+    background: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.about-intro-section>h2 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin: 3.5rem 0 1.5rem 0;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.about-intro-content {
+    width: 100%;
+    max-width: 900px;
+    background: var(--primary-color);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 32px rgba(2, 39, 58, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 2.5rem 3rem;
+    box-sizing: border-box;
+    margin: 0 auto 3.5rem auto;
+}
+
+.about-text {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.about-text p {
+    font-size: 1.13rem;
+    color: var(--white-color);
+    opacity: 0.92;
+    line-height: 1.7;
+    font-weight: 400;
+}
+
+.about-image {
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 320px;
+    min-width: 180px;
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 16px rgba(2, 39, 58, 0.10);
+    object-fit: cover;
+    background: #fff;
+}
+
+/* Responsive: tablet */
+@media (max-width: 950px) {
+    .about-intro-section>h2 {
+        font-size: 1.5rem;
+        margin: 2.2rem 0 1.2rem 0;
+    }
+
+    .about-intro-content {
+        flex-direction: column-reverse;
+        gap: 1.5rem;
+        padding: 2rem 1.2rem;
+        margin: 0 auto 2.2rem auto;
+    }
+
+    .about-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 220px;
+        min-width: 120px;
+        border-radius: 1rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive: mobile */
+@media (max-width: 600px) {
+    .about-intro-section>h2 {
+        font-size: 1.1rem;
+        margin: 1.2rem 0 0.8rem 0;
+    }
+
+    .about-intro-content {
+        padding: 1.2rem 0.5rem;
+        margin: 0 auto 1.2rem auto;
+    }
+
+    .about-image img {
+        max-width: 90vw;
+    }
+}

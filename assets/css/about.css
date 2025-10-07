@@ -1,0 +1,131 @@
+.about-section {
+    width: 100%;
+    background: var(--background-color);
+    padding: 4rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+.about-subtitle {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    opacity: 0.85;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: 400;
+}
+
+.about-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.about-feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    background: var(--white-color);
+    border-radius: 1.2rem;
+    box-shadow: 0 2px 16px rgba(2, 39, 58, 0.06);
+    padding: 1.2rem 1.5rem;
+    transition: box-shadow 0.2s;
+}
+
+.about-feature:hover {
+    box-shadow: 0 4px 32px rgba(52, 161, 222, 0.13);
+}
+
+.about-feature-icon {
+    font-size: 2.1rem;
+    color: var(--secondary-color);
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.about-feature strong {
+    font-size: 1.13rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.about-feature p {
+    font-size: 1rem;
+    color: var(--primary-color);
+    opacity: 0.85;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Responsive */
+@media (max-width: 950px) {
+    .about-section {
+        padding: 2.5rem 0 2rem 0;
+    }
+
+    .about-container {
+        padding: 0 1.2rem;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+    }
+
+    .about-features-list {
+        gap: 1.2rem;
+    }
+
+    .about-feature {
+        padding: 1rem 1rem;
+    }
+
+    .about-feature-icon {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-section {
+        padding: 1.2rem 0 1rem 0;
+    }
+
+    .about-title {
+        font-size: 1.1rem;
+    }
+
+    .about-subtitle {
+        font-size: 0.98rem;
+    }
+
+    .about-feature strong {
+        font-size: 1rem;
+    }
+
+    .about-feature p {
+        font-size: 0.95rem;
+    }
+}
